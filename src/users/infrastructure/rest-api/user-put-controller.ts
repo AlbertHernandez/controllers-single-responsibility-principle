@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 
 import { UserCreator } from "../../application/create-user/user-creator";
 
-export class UserController {
+export class UserPutController {
   constructor(private readonly userCreator: UserCreator) {}
 
   async createUser(req: Request, res: Response) {

@@ -1,9 +1,9 @@
 import express from "express";
 
-import { userController } from "../dependencies";
+import { userPutController } from "../dependencies";
 
 const userRouter = express.Router();
 
-userRouter.put("/:id", userController.createUser.bind(userController));
+userRouter.put("/:id", userPutController.createUser.bind(userPutController));
 
 export { userRouter };
