@@ -1,11 +1,11 @@
-<h1 align="center">Hexagonal Architecture Typescript Service Skeleton</h1>
+<h1 align="center">Controllers Single Responsibility Principle</h1>
 
 <p align="center">
-  Skeleton for new typescript services based on hexagonal architecture
+    Example to show SRP creating controllers
 </p>
 
 <p align="center">
-    <a href="https://github.com/AlbertHernandez/hexagonal-architecture-typescript-service-skeleton/actions/workflows/nodejs.yml?branch=main"><img src="https://github.com/AlbertHernandez/hexagonal-architecture-typescript-service-skeleton/actions/workflows/nodejs.yml/badge.svg?branch=main" alt="nodejs"/></a>
+    <a href="https://github.com/AlbertHernandez/controllers-single-responsibility-principle/actions/workflows/nodejs.yml?branch=main"><img src="https://github.com/AlbertHernandez/controllers-single-responsibility-principle/actions/workflows/nodejs.yml/badge.svg?branch=main" alt="nodejs"/></a>
 </p>
 
 ## Table of Contents
