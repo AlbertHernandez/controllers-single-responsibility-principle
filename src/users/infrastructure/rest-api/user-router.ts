@@ -4,9 +4,6 @@ import { userController } from "../dependencies";
 
 const userRouter = express.Router();
 
-userRouter.post(
-  "/:id/welcome",
-  userController.sendWelcomeMessage.bind(userController)
-);
+userRouter.put("/:id", userController.createUser.bind(userController));
 
 export { userRouter };

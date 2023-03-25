@@ -1,13 +1,19 @@
 import { Request, Response } from "express";
 
-import { WelcomeMessageSender } from "../../application/welcome-message-sender";
+import { UserCreator } from "../../application/create-user/user-creator";
 
 export class UserController {
-  constructor(private readonly welcomeMessageSender: WelcomeMessageSender) {}
+  constructor(private readonly userCreator: UserCreator) {}
 
-  async sendWelcomeMessage(req: Request, res: Response) {
-    const { id: userId } = req.params;
-    await this.welcomeMessageSender.sendToUser(userId);
-    res.status(200).send();
+  async createUser(req: Request, res: Response) {
+    const { id } = req.params;
+    const { name } = req.body;
+
+    await this.userCreator.run({
+      id,
+      name,
+    });
+
+    res.status(201).send();
   }
 }

@@ -1,15 +1,21 @@
 import { User } from "../../domain/user";
 import { UserRepository } from "../../domain/user-repository";
-import { USERS } from "./users";
 
 export class InMemoryUserRepository implements UserRepository {
-  async getById(id: string): Promise<User | null> {
-    const user = USERS.find((user) => user.id === id);
+  private users: User[] = [
+    {
+      id: "1",
+      name: "alber",
+    },
+    {
+      id: "2",
+      name: "juan",
+    },
+  ];
 
-    if (!user) {
-      return null;
-    }
-
-    return new User(user.id, user.email, user.slackUserId);
+  async save(user: User): Promise<void> {
+    this.users = this.users
+      .filter((dbUser) => dbUser.id !== user.id)
+      .concat([user]);
   }
 }
